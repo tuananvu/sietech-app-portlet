@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14413772463020" configfile="/sietech-app-portlet/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="views/view.xhtml" x="124" y="120" id="pf14413774618041" outlinks="pf14413774618043 pf14413796870445" inlinks="pf14413774618043" path="/views/view.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="views/view-result.xhtml" x="442" y="121" id="pf14413774618044" inlinks="pf14413796870445" path="/views/view-result.xhtml"/>
+  <links id="pf14413774618043" target="pf14413774618041" source="pf14413774618041" outcome="failure">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf14413796870445" target="pf14413774618044" source="pf14413774618041" outcome="success"/>
+</pageflow:Pageflow>

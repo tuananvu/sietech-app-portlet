@@ -1,0 +1,49 @@
+
+
+<f:view
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:bridge="http://liferay.com/faces/bridge"
+>
+ 
+<h:head><link rel="stylesheet" type="text/css" href="main.css"/></h:head>
+
+<h:body styleClass="body">
+	
+		<h2><h:outputText value="Resultant images from SIETech processing"></h:outputText></h2>
+		<ui:repeat var="i" value="#{hhtinputBean.iterationList}">
+			<h:panelGrid columnClasses="column1" columns="2" border="1" cellpadding="10" cellspacing="1" width="90%">
+				<h:outputText value="IMF_#{i}"></h:outputText>
+				<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/imf_#{i}.png"></h:graphicImage>
+			</h:panelGrid>
+		</ui:repeat>
+		
+		<ui:repeat var="i" value="#{hhtinputBean.iterationList}">
+			<h:panelGrid columnClasses="column1" columns="2" border="1" cellpadding="10" cellspacing="1" width="90%">
+				<h:outputText value="Residual_#{i}"></h:outputText>
+				<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/res_#{i}.png"></h:graphicImage>
+			</h:panelGrid>
+		</ui:repeat>
+		
+		<h:panelGrid columnClasses="column1" columns="2" border="1" cellpadding="10" cellspacing="1" width="90%">
+			<h:outputText value="Bi-orthant Hilbert Transform_1"></h:outputText>
+			<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/bht_1.png"></h:graphicImage>
+			
+			<h:outputText value="Amplitude_1"></h:outputText>
+			<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/amplitude_1.png"></h:graphicImage>
+			
+			<h:outputText value="Phase_1"></h:outputText>
+			<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/phase_1.png"></h:graphicImage>
+			
+			<h:outputText value="Horizontal Frequency_1"></h:outputText>
+			<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/freqcol_1.png"></h:graphicImage>
+			
+			<h:outputText value="Vertical Frequency_1"></h:outputText>
+			<h:graphicImage value="/imageservlet/#{hhtinputBean.fileName}_folder/freqrow_1.png"></h:graphicImage>			
+		</h:panelGrid>		
+	
+</h:body>
+</f:view>
